@@ -6,7 +6,7 @@
 
 ## About
 
-ESP8266 project to read temperature and humidity data from a DHT11 sensor and send it to an MQTT broker.
+This project uses an ESP8266 to read temperature and humidity data from a DHT11 sensor and send it to an MQTT broker.
 
 ## Run
 
@@ -42,7 +42,7 @@ I thank you in advance for any contribution.
 
 ## Status
 
-Maintaining
+Finished
 
 ## License
 

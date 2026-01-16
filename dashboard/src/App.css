@@ -1,0 +1,322 @@
+.app {
+  min-height: 100vh;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sensor-card {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 2rem;
+  min-width: 280px;
+  flex: 1;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sensor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .sensor-card:hover {
+    transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  stroke: #000000;
+  stroke-width: 2;
+  fill: none;
+}
+
+.value-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.value {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.connection-status {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.connection-status.connected {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.connection-status.disconnected {
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .app {
+    padding: 3rem 2rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .cards-container {
+    gap: 3rem;
+  }
+
+  .sensor-card {
+    padding: 2.5rem;
+    min-width: 320px;
+  }
+
+  .icon {
+    width: 72px;
+    height: 72px;
+  }
+
+  .value {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .app {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cards-container {
+    gap: 1.5rem;
+    flex-direction: row;
+  }
+
+  .sensor-card {
+    padding: 1.75rem;
+    min-width: 250px;
+    max-width: 350px;
+  }
+
+  .icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .value {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .app {
+    padding: 1.5rem 1rem;
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sensor-card {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .card-content {
+    gap: 1.25rem;
+  }
+
+  .icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .value {
+    font-size: 1.625rem;
+  }
+
+  .connection-status {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 1rem 0.75rem;
+    padding-top: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .cards-container {
+    gap: 1rem;
+  }
+
+  .sensor-card {
+    padding: 1.25rem;
+    border-radius: 10px;
+  }
+
+  .card-content {
+    gap: 1rem;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+    stroke-width: 1.5;
+  }
+
+  .value {
+    font-size: 1.375rem;
+  }
+
+  .connection-status {
+    margin-top: 1.25rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .app {
+    padding: 0.75rem 0.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .sensor-card {
+    padding: 1rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .value {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .app {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cards-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .sensor-card {
+    flex: 1;
+    min-width: 0;
+    padding: 1.25rem;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .value {
+    font-size: 1.5rem;
+  }
+}
